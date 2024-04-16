@@ -1,0 +1,11 @@
+() => Get.find<controllerphoneinfo>(tag: 'secend')
+                              .fifteensecends
+                              .value >=
+                          15
+                      ?
+                  Get.defaultDialog(
+                      title: 'هشدار',
+                      middleText: 'پیامک ارسال شود؟',
+                      textConfirm: 'بله',
+                      onConfirm: () {}):Get.snackbar(
+                          'خطا', 'هر 15 ثانیه یکبار درخواست ارسال کنید'),
